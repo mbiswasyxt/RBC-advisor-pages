@@ -85,6 +85,7 @@ export const config: TemplateConfig = {
       "c_associatedSolutions.photoGallery",
       "c_templateBBanner",
       "c_brandLogo",
+      "c_advisorBio"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -183,6 +184,7 @@ const Professional: Template<TemplateRenderProps> = ({
     c_associatedSolutions,
     c_templateBBanner,
     c_brandLogo,
+    c_advisorBio,
   } = document;
   console.log(photoGallery);
   return (
@@ -274,7 +276,7 @@ const Professional: Template<TemplateRenderProps> = ({
                 About me
               </div>
 
-              <div className="text-center px-32">{description}</div>
+              <div className="text-center px-32">{c_advisorBio ? c_advisorBio : description}</div>
             </div>
             <div className="w-full flex flex-col md:flex-row  mt-4 centered-container justify-between">
               <div>
